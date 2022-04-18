@@ -74,5 +74,24 @@ public class Main {
 
     StringBuilder novaFrase = stringBuilder.replace(4, 5, "y");
     System.out.println("novaFrase: " + novaFrase);
+
+    System.out.println("----Arrays----");
+    double[] arrayDoubles = new double[3];
+    arrayDoubles[0] = 200.00;
+    arrayDoubles[1] = 934.12;
+    arrayDoubles[2] = 43.4232;
+    System.out.println("arrayDoubles[1]: " + arrayDoubles[1]);
+    System.out.println("arrayDoubles[2]: " + arrayDoubles[2]);
+
+    System.out.println("----Arrays de Arrays----");
+    String[] stringArray = {"na Trybe!", "Partiu ", "Jaa ", "aprender "}; // Array de Strings
+    int[][] matriz = new int[2][3]; // Inicializando uma matriz
+    int[] arrayDeInteiros = {10, 20, 30}; // Array de 'int'
+
+    matriz[0][0] = 10;
+    matriz[1][0] = 20;
+    System.out.println("matriz[0][0] = " + matriz[0][0]);
+    System.out.println("matriz[1][0] = " + matriz[1][0]);
+    System.out.println("matriz.length = " + matriz.length);
   }
 }
