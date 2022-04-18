@@ -53,5 +53,13 @@ public class Main {
     boolean isValid = true;
     System.out.println("isFriday = " + isFriday);
     System.out.println("isValid = " + isValid);
+
+    System.out.println("----String type----");
+    String vamos = "Vamos";
+    String aprender = " aprender";
+    String java = " Java?";
+
+    String frase = vamos + aprender + java;
+    System.out.println("frase: " + frase);
   }
 }
