@@ -41,5 +41,16 @@ public class Main {
     System.out.println("varDouble = " + varDouble);
     System.out.println("doubleReceivingFloat = " + doubleReceivingFloat);
     System.out.println("doubleReceivingLong = " + doubleReceivingLong);
+
+    // char type
+    System.out.println("----double type----");
+    char myChar = 'c';
+    char myChar2 = 'C';
+    System.out.println("myChar == myChar2 ? " + (myChar == myChar2));
+
+    boolean isFriday = false;
+    boolean isValid = true;
+    System.out.println("isFriday = " + isFriday);
+    System.out.println("isValid = " + isValid);
   }
 }
