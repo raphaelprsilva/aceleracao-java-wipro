@@ -43,11 +43,12 @@ public class Main {
     System.out.println("doubleReceivingLong = " + doubleReceivingLong);
 
     // char type
-    System.out.println("----double type----");
+    System.out.println("----char type----");
     char myChar = 'c';
     char myChar2 = 'C';
     System.out.println("myChar == myChar2 ? " + (myChar == myChar2));
 
+    System.out.println("----boolean type----");
     boolean isFriday = false;
     boolean isValid = true;
     System.out.println("isFriday = " + isFriday);
