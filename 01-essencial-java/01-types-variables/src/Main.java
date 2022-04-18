@@ -61,5 +61,18 @@ public class Main {
 
     String frase = vamos + aprender + java;
     System.out.println("frase: " + frase);
+
+    System.out.println("----String Builder----");
+    // É uma classe, ou seja, ela precisa ser instanciada e pode ser usada para concatenar 'strings'
+    StringBuilder stringBuilder = new StringBuilder();
+    String estou = "Estou ";
+    String aprendendo = "aprendendo ";
+    String javaLang = "linguagem Java";
+
+    StringBuilder minhaNovaFrase = stringBuilder.append(estou).append(aprendendo).append(javaLang);
+    System.out.println("minhaNovaFrase: " + minhaNovaFrase);
+
+    StringBuilder novaFrase = stringBuilder.replace(4, 5, "y");
+    System.out.println("novaFrase: " + novaFrase);
   }
 }
