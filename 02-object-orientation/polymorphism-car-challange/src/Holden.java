@@ -5,17 +5,17 @@ public class Holden extends Car {
 
   @Override
   public String startEngine() {
-    return "Holden -> startEngine()";
+    return getClass().getSimpleName() + " -> startEngine()";
   }
 
   @Override
   public String accelerate() {
-    return "Holden -> accelerate()";
+    return getClass().getSimpleName() + " -> accelerate()";
   }
 
   @Override
   public String stop() {
-    return "Holden -> stop()";
+    return getClass().getSimpleName() + " -> stop()";
   }
 }
 
