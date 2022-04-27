@@ -29,3 +29,52 @@ Além disso, existem outros cinco métodos. Esses métodos devem ser definidos c
 As mensagens que esses métodos retornam devem conter em algum lugar o nome da classe, `Car`.
 
 Dois métodos `getter` também devem ser definidos aqui para os atributos `cylinders` e `name`. Todos os métodos têm acesso público.
+
+As outras três classes mencionadas acima são subclasses de `Car`.
+
+Essas classes não têm atributos e o construtor de cada uma chamará o construtor pai para instanciação do objeto.
+
+Cada uma dessas classes substituirá (fará `override`) os três métodos pai `startEngine`, `accelerate` e `stop`.
+
+As mensagens de retorno para esses métodos devem conter em algum lugar o nome da classe à qual os métodos pertencem.
+
+### Exemplo de input
+
+``` java
+    Car car = new Car(8, "Base car");
+    System.out.println(car.startEngine());
+    System.out.println(car.accelerate());
+    System.out.println(car.brake());
+
+    Mitsubishi mitsubishi = new Mitsubishi(6, "Outlander VRX4WD");
+    System.out.println(mitsubishi.startEngine());
+    System.out.println(mitsubishi.accelerate());
+    System.out.println(mitsubishi.brake());
+
+    Ford ford = new Ford(6, "Ford Falcon");
+    System.out.println(ford.startEngine());
+    System.out.println(ford.accelerate());
+    System.out.println(ford.brake());
+
+    Holden holden = new Holden(6, "Holden Commodore");
+    System.out.println(holden.startEngine());
+    System.out.println(holden.accelerate());
+    System.out.println(holden.brake());
+``` 
+
+### Exemplo de output
+
+``` 
+    Car -> startEngine()
+    Car -> accelerate()
+    Car -> brake()
+    Mitsubishi -> startEngine()
+    Mitsubishi -> accelerate()
+    Mitsubishi -> brake()
+    Ford -> startEngine()
+    Ford -> accelerate()
+    Ford -> brake()
+    Holden -> startEngine()
+    Holden -> accelerate()
+    Holden -> brake()
+``` 
