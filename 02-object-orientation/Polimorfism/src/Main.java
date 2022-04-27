@@ -2,6 +2,7 @@ public class Main {
   public static void main(String[] args) {
     for (int index = 0; index < 11; index += 1) {
       Movie movie = randomMovie();
+      assert movie != null;
       System.out.println("Movie #" + index + ": "
           + movie.getName() + "\n" + "Plot: " + movie.plot() + "\n");
     }
