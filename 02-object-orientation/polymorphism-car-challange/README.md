@@ -4,7 +4,7 @@ Para este exercício, você criará quatro classes de veículos.
 
 A primeira classe deve se chamar `Car`. Esta será a classe base para três outras classes, `Mitsubishi`, `Holden` e `Ford`.
 
-A primeira classe contém quatro atributos, ou campos, com estes nomes e condições:
+A classe `Car` contém quatro atributos, ou campos, com estes nomes e condições:
 
 - `engine` do tipo `booleano`
 
