@@ -67,14 +67,14 @@ As mensagens de retorno para esses métodos devem conter em algum lugar o nome d
 ``` 
     Car -> startEngine()
     Car -> accelerate()
-    Car -> brake()
+    Car -> stop()
     Mitsubishi -> startEngine()
     Mitsubishi -> accelerate()
-    Mitsubishi -> brake()
+    Mitsubishi -> stop()
     Ford -> startEngine()
     Ford -> accelerate()
-    Ford -> brake()
+    Ford -> stop()
     Holden -> startEngine()
     Holden -> accelerate()
-    Holden -> brake()
+    Holden -> stop()
 ``` 
