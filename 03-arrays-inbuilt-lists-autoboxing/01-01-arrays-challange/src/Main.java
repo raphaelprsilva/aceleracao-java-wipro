@@ -28,12 +28,16 @@ public class Main {
   }
 
   public static int[] sortIntegers(int[] array) {
-    int[] sortedArray = new int[array.length];
+    // 1ª maneira de fazer uma cópia do array original (comentado)
+    // int[] sortedArray = new int[array.length];
 
     // Faz uma cópia do array original
-    for (int i = 0; i < array.length; i += 1) {
-      sortedArray[i] = array[i];
-    }
+    // for (int i = 0; i < array.length; i += 1) {
+    //  sortedArray[i] = array[i];
+    // }
+
+    // 2ª maneira de fazer uma cópia do array original
+    int[] sortedArray = Arrays.copyOf(array, array.length);
 
     for (int i = 0; i < sortedArray.length; i += 1) {
       for (int j = 0; j < sortedArray.length - i - 1; j += 1) {
