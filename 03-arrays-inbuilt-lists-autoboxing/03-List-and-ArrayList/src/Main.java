@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -36,6 +37,9 @@ public class Main {
           searchItem();
           break;
         case 6:
+          processArrayList();
+          break;
+        case 7:
           quit = true;
           break;
       }
@@ -50,7 +54,8 @@ public class Main {
     System.out.println("\t 3 - To modify specific item.");
     System.out.println("\t 4 - To remove specific item.");
     System.out.println("\t 5 - To search for an item.");
-    System.out.println("\t 6 - To quit the application.");
+    System.out.println("\t 6 - To copy the grocery list");
+    System.out.println("\t 7 - To quit the application.");
   }
 
   public static void addItem() {
@@ -83,5 +88,18 @@ public class Main {
     } else {
       System.out.println(itemToSearch + " is not in the shopping list.");
     }
+  }
+
+  public static void processArrayList() {
+    // First way to copy data from an ArrayList
+    ArrayList<String> newArray = new ArrayList<String>();
+    newArray.addAll(groceryList.getGroceryList());
+
+    // Second way to copy data from an ArrayList
+    // ArrayList<String> nextArray = new ArrayList<String>(groceryList.getGroceryList());
+
+    // Third way to copy data from an ArrayList
+    String[] stringArray = new String[groceryList.getGroceryList().size()];
+    stringArray = groceryList.getGroceryList().toArray(stringArray);
   }
 }
