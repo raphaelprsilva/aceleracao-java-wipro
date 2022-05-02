@@ -49,9 +49,6 @@ public class GroceryList {
   public boolean onFile(String searchItem) {
     int position = findItem(searchItem);
 
-    if (position >= 0) {
-      return true;
-    }
-    return false;
+    return position >= 0;
   }
 }
