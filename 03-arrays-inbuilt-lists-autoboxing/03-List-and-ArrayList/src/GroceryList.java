@@ -23,7 +23,7 @@ public class GroceryList {
     }
   }
 
-  public void modifiyGroceryItem(int position, String newItem) {
+  private void modifiyGroceryItem(int position, String newItem) {
     this.groceryList.set(position, newItem);
     System.out.println("Grocery item " + (position + 1) + " has been modified.");
   }
@@ -36,7 +36,7 @@ public class GroceryList {
     }
   }
 
-  public void removeGroceryItem(int position) {
+  private void removeGroceryItem(int position) {
     String item = this.groceryList.get(position);
     System.out.println(item + " was removed.");
     this.groceryList.remove(position);
