@@ -42,7 +42,16 @@ public class GroceryList {
     this.groceryList.remove(position);
   }
 
-  public int findItem(String searchItem) {
+  private int findItem(String searchItem) {
     return this.groceryList.indexOf(searchItem);
+  }
+
+  public boolean onFile(String searchItem) {
+    int position = findItem(searchItem);
+
+    if (position >= 0) {
+      return true;
+    }
+    return false;
   }
 }
