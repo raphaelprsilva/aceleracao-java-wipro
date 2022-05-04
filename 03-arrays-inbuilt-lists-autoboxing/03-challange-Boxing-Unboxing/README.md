@@ -6,7 +6,7 @@ Implemente as seguintes classes:
 
 ### 1. `Bank`
 
-- Possui dois campos, uma `String` chamada `name` e um `ArrayList` que contém objetos do tipo `Branch` chamados `branches`.
+- Possui dois atributos, uma `String` chamada `name` e um `ArrayList` que contém objetos do tipo `Branch` chamados `branches`.
 
 - Um construtor que recebe uma `String` (**nome do banco**). Ele inicializa o nome e instancia branches.
 
