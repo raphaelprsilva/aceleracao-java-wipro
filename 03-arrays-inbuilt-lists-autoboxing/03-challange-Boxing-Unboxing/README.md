@@ -4,40 +4,42 @@ Seu trabalho é criar um aplicativo bancário simples.
 
 Implemente as seguintes classes:
 
-### `Banco`
+### 1. `Bank`
 
 - Possui dois campos, uma `String` chamada `name` e um `ArrayList` que contém objetos do tipo `Branch` chamados `branches`.
 
 - Um construtor que recebe uma `String` (**nome do banco**). Ele inicializa o nome e instancia branches.
 
-- E **cinco métodos**, eles são (**suas funções estão em seus nomes**):
+- E **cinco métodos**, são eles (**suas funções estão em seus nomes**):
 
-  - `addBranch()`, tem **um** parâmetro do tipo `String` (**nome do branch**) e retorna um `boolean`. Ele retorna `true` se a `branch` foi adicionada com sucesso ou `false` caso contrário.
+  - `addBranch()`, tem **um** parâmetro do tipo `String` (**nome da branch**) e retorna um `boolean`. Ele retorna `true` se a `branch` foi adicionada com sucesso ou `false` caso contrário.
 
   - `addCustomer()`, possui **três** parâmetros do tipo `String` (**nome da filial**), `String` (**nome do cliente**), `double` (**transação inicial**) e retorna um `boolean`. Retorna `true` se o cliente foi adicionado com sucesso ou `false` caso contrário.
 
   - `addCustomerTransaction()`, possui **três** parâmetros do tipo `String` (**nome da filial**), `String` (**nome do cliente**), `double` (**transação**) e retorna um `boolean`. Retorna `true` se a transação do cliente foi adicionada com sucesso ou `false` caso contrário.
 
-  - `findBranch()`, possui **um** parâmetro do tipo `String` (**nome do Branch**) e retorna um `Branch`. Retorna o `Branch` se existir ou `null` caso contrário.
+  - `findBranch()`, possui **um** parâmetro do tipo `String` (**nome da Branch**) e retorna uma `Branch`. Retorna a `Branch` se existir ou `null` caso contrário.
 
   - `listCustomers()`, possui **dois** parâmetros do tipo `String` (**nome da Branch**), `boolean` (**imprime transações**) e retorna um `boolean`. Retorna `true` se a `branch` existir ou `false` caso contrário. Este método imprime uma lista de clientes.
+
+> **DICA 1**: Em `Bank`, use o método `findBranch()` em cada um dos outros quatro métodos para validar uma `branch`. Faça a mesma coisa na `Branch` com `findCustomer()` - exceto pelos dois getters.
 
 ### Código para o teste
 
 ~~~java
-Banco banco = new Banco("Banco da Márcia");
+Bank bank = new Bank("Banco da Márcia");
 
-bank.addBranch("Brasília");
+bank.addBranch("Brasilia");
 
-bank.addCustomer("Brasília", "Tim", 50.05);
-bank.addCustomer("Brasília", "Mike", 175.34);
-bank.addCustomer("Brasília", "Percy", 220.12);
+bank.addCustomer("Brasilia", "Tim", 50.05);
+bank.addCustomer("Brasilia", "Mike", 175.34);
+bank.addCustomer("Brasilia", "Percy", 220.12);
 
-bank.addCustomerTransaction("Brasília", "Tim", 44.22);
-bank.addCustomerTransaction("Brasília", "Tim", 12.44);
-bank.addCustomerTransaction("Brasília", "Mike", 1.65);
+bank.addCustomerTransaction("Brasilia", "Tim", 44.22);
+bank.addCustomerTransaction("Brasilia", "Tim", 12.44);
+bank.addCustomerTransaction("Brasilia", "Mike", 1.65);
 
-bank.listCustomers("Brasília", true);
+bank.listCustomers("Brasilia", true);
 
 ~~~
 
@@ -46,8 +48,7 @@ bank.listCustomers("Brasília", true);
 A lista de clientes deve ser impressa no seguinte formato se o parâmetro booleano for verdadeiro:
 
 ~~~text
-
-Detalhes do cliente para a filial Brasília
+Detalhes do cliente para a filial Brasilia
 Cliente: Tim[1]
 Transações
 [1] Valor 50,05
@@ -73,7 +74,7 @@ Cliente: Mike[2]
 Cliente: Percy[3]
 ~~~
 
-### `Branch`
+### 2. `Branch`
 
 - Tem **dois** campos, uma `String` chamada `name` e uma `ArrayList` que contém objetos do tipo `Customer` chamados `customers`.
 
@@ -91,7 +92,7 @@ Cliente: Percy[3]
 
   - `findCustomer()`, tem um parâmetro do tipo `String` (**nome do cliente**) e retorna um `Customer`. Retorne `Customer` se ele existir e `null`, caso contrário.
 
-### `Customer`
+### 3. `Customer`
 
 -  Possui **dois** campos, uma `String` chamada `name` e uma `ArrayList` que contém objetos do tipo `Double` chamados `transactions`.
 
@@ -104,8 +105,6 @@ Cliente: Percy[3]
 -  `getTransactions()`, getter para `transactions`.
 
 -  `addTransaction()`, tem um parâmetro do tipo `double` (`transaction`) e não retorna nada.
-
-> **DICA 1**: Em `Bank`, use o método `findBranch()` em cada um dos outros quatro métodos para validar uma `branch`. Faça a mesma coisa na `Branch` com `findCustomer()` - exceto pelos dois getters.
 
 > **DICA 2**: Em `Customer`, pense no que mais você precisa fazer no construtor ao instanciar um objeto `Customer`.
 
