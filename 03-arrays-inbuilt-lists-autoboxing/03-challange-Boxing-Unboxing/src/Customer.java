@@ -9,4 +9,12 @@ public class Customer {
     this.transactions = new ArrayList<Double>();
     this.transactions.add(initialTransaction);
   }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public ArrayList<Double> getTransactions() {
+    return this.transactions;
+  }
 }
