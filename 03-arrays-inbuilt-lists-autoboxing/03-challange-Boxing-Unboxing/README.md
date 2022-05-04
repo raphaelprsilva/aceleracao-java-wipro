@@ -6,6 +6,8 @@ Implemente as seguintes classes:
 
 ### 1. `Bank`
 
+> Dica de tradução: a palavra `branch` no contexto, significa `filial`.
+
 - Possui dois atributos, uma `String` chamada `name` e um `ArrayList` que contém objetos do tipo `Branch` chamados `branches`.
 
 - Um construtor que recebe uma `String` (**nome do banco**). Ele inicializa o nome e instancia branches.
@@ -14,7 +16,7 @@ Implemente as seguintes classes:
 
   - `addBranch()`, tem **um** parâmetro do tipo `String` (**nome da branch**) e retorna um `boolean`. Ele retorna `true` se a `branch` foi adicionada com sucesso ou `false` caso contrário.
 
-  - `addCustomer()`, possui **três** parâmetros do tipo `String` (**nome da filial**), `String` (**nome do cliente**), `double` (**transação inicial**) e retorna um `boolean`. Retorna `true` se o cliente foi adicionado com sucesso ou `false` caso contrário.
+  - `addCustomer()`, possui **três** parâmetros do tipo `String` (**nome da branch**), `String` (**nome do cliente**), `double` (**transação inicial**) e retorna um `boolean`. Retorna `true` se o cliente foi adicionado com sucesso ou `false` caso contrário.
 
   - `addCustomerTransaction()`, possui **três** parâmetros do tipo `String` (**nome da filial**), `String` (**nome do cliente**), `double` (**transação**) e retorna um `boolean`. Retorna `true` se a transação do cliente foi adicionada com sucesso ou `false` caso contrário.
 
@@ -74,7 +76,7 @@ Cliente: Mike[2]
 Cliente: Percy[3]
 ~~~
 
-### 2. `Branch`
+### 2. `Branch` (Filial)
 
 - Tem **dois** campos, uma `String` chamada `name` e uma `ArrayList` que contém objetos do tipo `Customer` chamados `customers`.
 
@@ -98,7 +100,7 @@ Cliente: Percy[3]
 
 -  Um construtor que recebe uma `String` (**nome do cliente**) e um `double` (**transação inicial**). Ele inicializa o `name` e instancia as `transactions`.
 
--  E **três** métodos, eles são (**suas funções estão em seus nomes**):
+-  E **três** métodos, são eles (**suas funções estão em seus nomes**):
 
 -  `getName()`, getter para `name`.
 
