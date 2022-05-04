@@ -54,4 +54,47 @@ public class Bank {
 
     return -1;
   }
+
+  public boolean listCustomers(String branchName, boolean listTransactions) {
+    // 1. Verificar se a filial (branch) existe.
+    // 2. Se a filial existir:
+    // 2.1. Verificar se listTransactions é verdadeiro ou false
+    // 2.2. Se listTransactions for verdadeiro, mostrar as transações de todos os clientes.
+    // 2.3 Se listTransactions for falso, mostrar apenas os nomes dos clientes.
+    if (findBranch(branchName) >= 0) {
+      Branch branch = this.branches.get(findBranch(branchName));
+
+      if (listTransactions) {
+        // Mostrar as transações de todos os clientes
+        System.out.println("------------------------------");
+        System.out.println("Detalhes da filial de " + branch.getName());
+        System.out.println("------------------------------");
+
+        for (int index = 0; index < branch.getCustomers().size(); index += 1) {
+          String customerName = branch.getCustomers().get(index).getName();
+          System.out.println("------------------------------");
+          System.out.println("Cliente : " + customerName);
+          System.out.println("------------------------------");
+          System.out.println("-------- Transações ----------");
+
+          ArrayList<Double> customerTransactions = branch.getCustomers().get(index).getTransactions();
+
+          for (int j = 0; j < customerTransactions.size(); j += 1) {
+            System.out.println((j + 1) + " - Valor: " + customerTransactions.get(j));
+          }
+          System.out.println("------------------------------");
+        }
+      } else {
+        // Mostrar apenas os nomes dos clientes
+        for (int index = 0; index < branch.getCustomers().size(); index += 1) {
+          String customerName = branch.getCustomers().get(index).getName();
+          System.out.println("------------------------------");
+          System.out.println("Cliente : " + customerName);
+          System.out.println("------------------------------");
+        }
+      }
+      return true;
+    }
+    return false;
+  }
 }
