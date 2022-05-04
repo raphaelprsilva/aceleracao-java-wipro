@@ -17,4 +17,12 @@ public class Customer {
   public ArrayList<Double> getTransactions() {
     return this.transactions;
   }
+
+  public void addTransaction(double transaction) {
+    if (transaction > 0) {
+      this.transactions.add(transaction);
+    } else {
+      System.out.println("Não é possível fazer um transação com valor negativo.");
+    }
+  }
 }
