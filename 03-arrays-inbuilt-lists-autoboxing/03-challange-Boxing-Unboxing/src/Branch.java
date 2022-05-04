@@ -16,4 +16,16 @@ public class Branch {
   public ArrayList<Customer> getCustomers() {
     return this.customers;
   }
+
+  public int findCustomer(String clientName) {
+    for (int index = 0; index < this.customers.size(); index += 1) {
+      Customer customer = this.customers.get(index);
+
+      if (customer.getName().equals(clientName)) {
+        return index;
+      }
+    }
+
+    return -1;
+  }
 }
