@@ -29,8 +29,7 @@ public class Bank {
     int branchIndex = findBranch(branchName);
     if (branchIndex >= 0) {
       Branch branch = this.branches.get(branchIndex);
-      branch.newCustomer(clientName, initialTransaction);
-      return true;
+      return branch.newCustomer(clientName, initialTransaction);
     }
     return false;
   }
