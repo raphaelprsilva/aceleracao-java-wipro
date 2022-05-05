@@ -26,8 +26,9 @@ public class Bank {
     // 1. Preciso verificar se a filial (branchName) passada existe.
     // 2. Se existir, devo criar o novo cliente. (Isso deve ser feio na classe Branch) => Mas antes, devo verificar se existe algum cliente com o mesmo nome.
     // 3. Caso contrário, disparar uma mensagem e retornar false.
-    if (findBranch(branchName) >= 0) {
-      Branch branch = this.branches.get(findBranch(branchName));
+    int branchIndex = findBranch(branchName);
+    if (branchIndex >= 0) {
+      Branch branch = this.branches.get(branchIndex);
       branch.newCustomer(clientName, initialTransaction);
       return true;
     }
