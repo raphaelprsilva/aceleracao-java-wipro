@@ -41,7 +41,7 @@ public class Branch {
     return false;
   }
 
-  public int findCustomer(String clientName) {
+  private int findCustomer(String clientName) {
     for (int index = 0; index < this.customers.size(); index += 1) {
       Customer customer = this.customers.get(index);
 
