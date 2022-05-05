@@ -35,10 +35,11 @@ public class Bank {
   }
 
   public boolean addCustomerTransaction(String branchName, String clientName, double transaction) {
-    if (findBranch(branchName) >= 0) {
-      Branch branch = this.branches.get(findBranch(branchName));
-      branch.addCustomerTransaction(clientName, transaction);
-      return true;
+    int branchIndex = findBranch(branchName);
+
+    if (branchIndex >= 0) {
+      Branch branch = this.branches.get(branchIndex);
+      return branch.addCustomerTransaction(clientName, transaction);
     }
     return false;
   }
