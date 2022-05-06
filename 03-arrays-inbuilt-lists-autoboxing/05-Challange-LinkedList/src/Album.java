@@ -18,7 +18,7 @@ public class Album {
     Song foundSong = findSong(title);
 
     if (foundSong != null) {
-      System.out.println(title + " já existe no album");
+      System.out.println("A música '" + title + "' já existe no álbum.");
       return false;
     }
 
