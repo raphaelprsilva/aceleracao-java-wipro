@@ -6,7 +6,7 @@ Para começar, implemente as seguintes classes:
 
 ## 1. `Album`
 
-- Possui três atributos, duas `Strings` chamadas `name` e `artista`, e um `ArrayList` que contém objetos do tipo `Song` chamados `songs`.
+- Possui três atributos, duas `Strings` chamadas `name` e `artist`, e um `ArrayList` que contém objetos do tipo `Song` chamados `songs`.
 
 - Um `construtor` que aceita **duas** `Strings` (nome do álbum e artista). Ele inicializa os campos e instancia `songs`.
 
