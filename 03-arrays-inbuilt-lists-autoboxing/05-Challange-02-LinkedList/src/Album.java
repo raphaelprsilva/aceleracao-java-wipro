@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Album {
   private String name;
@@ -23,6 +24,18 @@ public class Album {
 
     System.out.println("Não foi possível adicionar a música '" + title + "'. Ela já existe no álbum.");
     return false;
+  }
+
+  public boolean addSongToPlaylist(String title, LinkedList<Song> playlist) {
+    Song foundSong = findSong(title);
+
+    if (foundSong == null) {
+      System.out.println("Não foi possível adicionar a música '" + title + "' na playlist.");
+      return false;
+    }
+
+    playlist.add(foundSong);
+    return true;
   }
 
   public Song findSong(String title) {
