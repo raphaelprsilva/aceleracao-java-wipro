@@ -39,7 +39,7 @@ public class Album {
   }
 
   public Song findSong(String title) {
-    for (Song song : songs) {
+    for (Song song : this.songs) {
       if (song.getTitle().equals(title)) {
         return song;
       }
