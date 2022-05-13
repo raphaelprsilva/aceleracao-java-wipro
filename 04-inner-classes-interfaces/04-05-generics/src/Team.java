@@ -23,7 +23,7 @@ public class Team {
       return false;
     } else {
       members.add(player);
-      System.out.println(player.getName() + " add to team " + this.name);
+      System.out.println(player.getName() + " added to team " + this.name);
       return true;
     }
   }
