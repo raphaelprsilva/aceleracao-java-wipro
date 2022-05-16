@@ -32,7 +32,7 @@ public class Team<T extends Player> {
     return this.members.size();
   }
 
-  public void matchResult(Team otherTeam, int ourScore, int theirScore) {
+  public void matchResult(Team<T> otherTeam, int ourScore, int theirScore) {
     String message;
 
     if (theirScore > ourScore) {
