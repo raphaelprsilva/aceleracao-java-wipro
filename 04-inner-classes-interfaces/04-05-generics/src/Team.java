@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 
-public class Team {
+public class Team<T extends Player> {
   private final String name;
   int played = 0;
   int won = 0;
   int lost = 0;
   int tied = 0;
 
-  private ArrayList<Player> members = new ArrayList<>();
+  private ArrayList<T> members = new ArrayList<>();
 
   public Team(String name) {
     this.name = name;
@@ -17,7 +17,7 @@ public class Team {
     return name;
   }
 
-  public boolean addPlayer(Player player) {
+  public boolean addPlayer(T player) {
     if (members.contains(player)) {
       System.out.println(player.getName() + " is already on this team");
       return false;
