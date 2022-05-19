@@ -8,10 +8,10 @@ Crie um pacote com o nome adequado contendo uma classe chamada Series com os seg
 - `factorial(int n)` retorna o produto de todos os números de `1` a `n`, ou seja, 1 * 2 * 3 * 4 ... * (n - 1) * n.
   - Os primeiros 10 fatoriais são: 0, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800.
 
-- `fibonacci(n)` retorna o enésimo número de Fibonacci.
+- `fibonacci(int n)` retorna o enésimo número de Fibonacci.
   - Estes são definidos como:
     ```
-    f(0) = 0
+    f(0) = 1
     f(1) = 1
     f(n) = f(n-1) + f(n-2)
     ```
