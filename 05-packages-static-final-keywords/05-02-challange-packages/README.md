@@ -11,7 +11,7 @@ Crie um pacote com o nome adequado contendo uma classe chamada Series com os seg
 - `fibonacci(int n)` retorna o enésimo número de Fibonacci.
   - Estes são definidos como:
     ```
-    f(0) = 1
+    f(0) = 0
     f(1) = 1
     f(n) = f(n-1) + f(n-2)
     ```
