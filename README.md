@@ -19,7 +19,7 @@ Abaixo, temos a trilha a ser percorrida:
     <summary><strong>2. 🏘 Fundamentos Da linguagem Java</strong></summary>
 
 <ul>
-    <li><a href="./02-fundamentos-do-java/README.md">1. Fundamentos</a></li>
+    <li><a href="https://github.com/raphaelprsilva/awesome-java/tree/main/02-fundamentos-do-java">1. Fundamentos</a></li>
 </ul>
 </details>
 
