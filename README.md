@@ -12,10 +12,6 @@ Abaixo, temos a trilha a ser percorrida:
 
 <ul>
     <li><a href="./01-primeiros-passos/README.md">Primeiros Passos</a></li>
-    <li><a>a</a></li>
-    <li><a>a</a></li>
-    <li><a>a</a></li>
-    <li><a>a</a></li>
 </ul>
 </details>
 
@@ -23,11 +19,7 @@ Abaixo, temos a trilha a ser percorrida:
     <summary><strong>2. 🏘 Fundamentos Da linguagem Java</strong></summary>
 
 <ul>
-    <li><a>a</a></li>
-    <li><a>a</a></li>
-    <li><a>a</a></li>
-    <li><a>a</a></li>
-    <li><a>a</a></li>
+    <li><a href="./02-fundamentos-do-java/README.md">1. Fundamentos</a></li>
 </ul>
 </details>
 
