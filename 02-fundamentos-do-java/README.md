@@ -7,3 +7,5 @@ Lista de conteúdos abordados nessa seção:
 3. [Convenções de código](./03-convencoes-de-codigo/README.md)
 4. [Palavras Reservadas](./04-palavras-reservadas/README.md)
 5. [Variáveis](./05-variaveis/README.md)
+6. [Operadores Aritméticos](./06-operadores-aritmeticos/README.md)
+7. [Abreviando Operadores Aritméticos](./07-abreviando-operadores-aritmeticos/README.md)
