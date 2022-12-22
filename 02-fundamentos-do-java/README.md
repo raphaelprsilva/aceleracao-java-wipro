@@ -12,3 +12,4 @@ Lista de conteúdos abordados nessa seção:
 8. [Operadores de Incremento e Decremento](./08-operadores-de-incremento-decremento/README.md)
 9. [Tipos Primitivos](./09-tipos-primitivos/README.md)
 10. [Conversão de Tipos Primitivos](./10-conversao-tipos-primitivos/README.md)
+11. [Promoção Aritmética](./11-promocao-aritmetica/README.md)
