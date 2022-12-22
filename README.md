@@ -10,17 +10,17 @@ Abaixo, temos a trilha a ser percorrida:
 <details>
     <summary><strong>1. 🚶 Primeiros Passos na linguagem</strong></summary>
 
-<ul>
+<ol>
     <li><a href="./01-primeiros-passos/README.md">Primeiros Passos</a></li>
-</ul>
+</ol>
 </details>
 
 <details>
     <summary><strong>2. 🏘 Fundamentos Da linguagem Java</strong></summary>
 
-<ul>
-    <li><a href="./02-fundamentos-do-java/README.md">1. Fundamentos</a></li>
-</ul>
+<ol>
+    <li><a href="https://github.com/raphaelprsilva/awesome-java/tree/main/02-fundamentos-do-java">Fundamentos</a></li>
+</ol>
 </details>
 
 <details>
