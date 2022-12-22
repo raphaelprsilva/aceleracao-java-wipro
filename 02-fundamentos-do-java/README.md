@@ -11,3 +11,4 @@ Lista de conteúdos abordados nessa seção:
 7. [Abreviando Operadores Aritméticos](./07-abreviando-operadores-aritmeticos/README.md)
 8. [Operadores de Incremento e Decremento](./08-operadores-de-incremento-decremento/README.md)
 9. [Tipos Primitivos](./09-tipos-primitivos/README.md)
+10. [Conversão de Tipos Primitivos](./10-conversao-tipos-primitivos/README.md)
