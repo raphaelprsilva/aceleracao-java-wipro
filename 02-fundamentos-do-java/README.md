@@ -9,3 +9,4 @@ Lista de conteúdos abordados nessa seção:
 5. [Variáveis](./05-variaveis/README.md)
 6. [Operadores Aritméticos](./06-operadores-aritmeticos/README.md)
 7. [Abreviando Operadores Aritméticos](./07-abreviando-operadores-aritmeticos/README.md)
+8. [Operadores de Incremento e Decremento](./08-operadores-de-incremento-decremento/README.md)
