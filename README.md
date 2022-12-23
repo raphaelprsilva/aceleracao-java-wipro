@@ -11,7 +11,7 @@ Abaixo, temos a trilha a ser percorrida:
 
 [2. 🏘 Fundamentos Da linguagem Java](https://github.com/raphaelprsilva/awesome-java/tree/main/02-fundamentos-do-java)
 
-[3. 🎛 Estruturas de Controle]()
+[3. 🎛 Estruturas de Controle](./03-estruturas-de-controle/README.md)
 
 [4. 🖥️ POO - Programação Orientada a Objetos]()
 
