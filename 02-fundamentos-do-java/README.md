@@ -15,3 +15,4 @@ Lista de conteúdos abordados nessa seção:
 11. [Promoção Aritmética](./11-promocao-aritmetica/README.md)
 12. [Strings](./12-strings/README.md)
 13. [Sequências de Escape](./13-sequencias-de-escape/README.md)
+14. [Formatando Saída](./14-formatando-saida/README.md)
