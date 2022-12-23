@@ -14,3 +14,4 @@ Lista de conteúdos abordados nessa seção:
 10. [Conversão de Tipos Primitivos](./10-conversao-tipos-primitivos/README.md)
 11. [Promoção Aritmética](./11-promocao-aritmetica/README.md)
 12. [Strings](./12-strings/README.md)
+13. [Sequências de Escape](./13-sequencias-de-escape/README.md)
