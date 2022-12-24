@@ -11,3 +11,4 @@ Lista de conteúdos abordados nessa seção:
 7. [Estrutura Condicional `else` e `else if`](./07-estrutura-else-if/README.md)
 8. [Escopos e Inicialização de Variáveis](./08-escopos-e-inicializacao/README.md)
 9. [Estrutura `switch`](./09-estrutura-switch/README.md)
+10. [Switch Expressions](./10-switch-expressions/README.md)
