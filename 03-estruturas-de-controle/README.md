@@ -7,3 +7,4 @@ Lista de conteúdos abordados nessa seção:
 3. [Operadores Lógicos](./03-operadores-logicos/README.md)
 4. [Curto Circuito De Operadores Lógicos](./04-curto-circuito/README.md)
 5. [Precedência de Operadores](./05-precedencia-de-operadores/README.md)
+6. [Estrutura Condicional `if`](./06-estrutura-condicional-if/README.md)
