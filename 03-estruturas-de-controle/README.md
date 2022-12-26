@@ -14,3 +14,4 @@ Lista de conteúdos abordados nessa seção:
 10. [Switch Expressions](./10-switch-expressions/README.md)
 11. [Operador Ternário](./11-operadores-ternarios/README.md)
 12. [Estrutura de Repetição `for`](./12-estrutura-repeticao-for/README.md)
+13. [Estrutura de Repetição `while`](./13-loop-while/README.md)
