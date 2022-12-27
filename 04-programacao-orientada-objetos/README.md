@@ -8,3 +8,4 @@ Abaixo, temos os conteúdos da seção.
 2. [Entendendo Classes e Objetos](./02-classes-e-objetos/README.md)
 3. [Criando uma Classe com Atributos](./03-criando-classe-com-atributos/README.md)
 4. [Linguagem UML](./04-linguagem-UML/README.md)
+5. [Composição de Objetos](./05-composicao-objetos/README.md)
