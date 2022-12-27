@@ -13,7 +13,7 @@ Abaixo, temos a trilha a ser percorrida:
 
 [3. 🎛 Estruturas de Controle](./03-estruturas-de-controle/README.md)
 
-[4. 🖥️ POO - Programação Orientada a Objetos]()
+[4. 🖥️ POO - Programação Orientada a Objetos](./04-programacao-orientada-objetos/README.md)
 
 [5. 🧹️ Boas Práticas - Código Limpo]()
 
