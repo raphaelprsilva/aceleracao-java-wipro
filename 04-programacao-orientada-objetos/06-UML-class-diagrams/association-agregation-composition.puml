@@ -1,0 +1,30 @@
+@startuml
+
+class Carro {
+  anoFabricacao: int
+  cor: String
+  fabricante: String
+  modelo: String
+}
+
+class Pessoa {
+  nome : String
+  cpf : String
+  anoNascimento : int
+}
+
+class Motor {
+  numeroDeSerie: String
+}
+
+class Chassi {
+  numero: String
+}
+
+Carro --> "0..1" Pessoa : proprietario >
+
+Carro "1" o-- Motor : aggregation (um existem sem o outro, relação fraca)
+
+Carro "1" *-- Chassi : composition (um não existe sem o outro, relação forte)
+
+@enduml
