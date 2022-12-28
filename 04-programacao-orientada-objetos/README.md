@@ -11,3 +11,4 @@ Abaixo, temos os conteúdos da seção.
 5. [Composição de Objetos](./05-composicao-objetos/README.md)
 6. [Diagrama de Classes: Associação, Agregação e Composição](./06-UML-class-diagrams/README.md)
 7. [Inicializando objetos em variáveis de instância](./07-objetos-variaveis-instancia/README.md)
+8. [Criando e Invocando um método](./08-metodos/README.md)
