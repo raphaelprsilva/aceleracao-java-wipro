@@ -16,3 +16,4 @@ Abaixo, temos os conteúdos da seção.
 10. [Nomes e Responsabilidade de Classes](./10-nome-responsabilidade-classes/README.md)
 11. [Desafio Composição](./11-desafio-composicao-objetos/README.md)
 12. [Métodos que alteram variáveis de instância](./12-metodos-alteram-variaveis-instancia/README.md)
+13. [Métodos que alteram o valor de parâmetro do tipo primitivo](./13-metodos-alteram-valor-primitivo/README.md)
