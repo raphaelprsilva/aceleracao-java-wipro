@@ -20,3 +20,4 @@ Abaixo, temos os conteúdos da seção.
 14. [Métodos que alteram o estado de objeto recebido como parâmetro](./14-metodos-alteram-estado-objeto/README.md)
 15. [A palvra reservada `this`](./15-palavra-chave-this/README.md)
 16. [Atributos de classe com o modificador `static`](./16-modificador-static/README.md)
+17. [Métodos de classe que alteram atributo estático](./17-metodo-instancia-altera-membro-estatico/README.md)
