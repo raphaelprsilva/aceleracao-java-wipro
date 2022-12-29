@@ -21,3 +21,4 @@ Abaixo, temos os conteúdos da seção.
 15. [A palvra reservada `this`](./15-palavra-chave-this/README.md)
 16. [Atributos de classe com o modificador `static`](./16-modificador-static/README.md)
 17. [Métodos de classe que alteram atributo estático](./17-metodo-instancia-altera-membro-estatico/README.md)
+18. [Método Estático Acessando um Membro de Instância](./18-metodo-estatico-acessando-membro-instancia/README.md)
