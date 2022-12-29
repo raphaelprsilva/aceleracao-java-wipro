@@ -11,17 +11,24 @@ public class User {
     this.email = email;
   }
 
+  public String getName() {
+    return name;
+  }
+
+  public String getEmail() {
+    return email;
+  }
+
   @Override
-  public boolean equals(Object obj) {
-    if (obj instanceof User) {
-      User anotherUser = (User) obj;
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    User user = (User) o;
+    return name.equals(user.name) && email.equals(user.email);
+  }
 
-      boolean isNameEqual = anotherUser.name.equals(this.name);
-      boolean isEmailEqual = anotherUser.email.equals(this.email);
-
-      return isEmailEqual && isNameEqual;
-    } else {
-      return false;
-    }
+  @Override
+  public int hashCode() {
+    return Objects.hash(name, email);
   }
 }
