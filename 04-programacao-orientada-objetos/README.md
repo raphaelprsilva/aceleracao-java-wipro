@@ -17,3 +17,4 @@ Abaixo, temos os conteúdos da seção.
 11. [Desafio Composição](./11-desafio-composicao-objetos/README.md)
 12. [Métodos que alteram variáveis de instância](./12-metodos-alteram-variaveis-instancia/README.md)
 13. [Métodos que alteram o valor de parâmetro do tipo primitivo](./13-metodos-alteram-valor-primitivo/README.md)
+14. [Métodos que alteram o estado de objeto recebido como parâmetro](./14-metodos-alteram-estado-objeto/README.md)
