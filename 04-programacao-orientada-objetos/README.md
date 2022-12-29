@@ -14,3 +14,5 @@ Abaixo, temos os conteúdos da seção.
 8. [Criando e Invocando um método](./08-metodos/README.md)
 9. [Métodos que retornam objetos](./09-metodos-que-retornam-objetos/README.md)
 10. [Nomes e Responsabilidade de Classes](./10-nome-responsabilidade-classes/README.md)
+11. [Desafio Composição](./11-desafio-composicao-objetos/README.md)
+12. [Métodos que alteram variáveis de instância](./12-metodos-alteram-variaveis-instancia/README.md)
