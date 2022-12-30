@@ -15,7 +15,7 @@ Abaixo, temos a trilha a ser percorrida:
 
 [4. 🖥️ POO - Programação Orientada a Objetos](./04-programacao-orientada-objetos/README.md)
 
-[5. 🧹️ Boas Práticas - Código Limpo]()
+[5. 🧹️ Boas Práticas - Código Limpo](./05-boas-praticas-codigo-limpo/README.md)
 
 [6. 🎁️ Wrappers e boxing]()
 
