@@ -22,3 +22,4 @@ Abaixo, temos os conteúdos da seção.
 16. [Atributos de classe com o modificador `static`](./16-modificador-static/README.md)
 17. [Métodos de classe que alteram atributo estático](./17-metodo-instancia-altera-membro-estatico/README.md)
 18. [Método Estático Acessando um Membro de Instância](./18-metodo-estatico-acessando-membro-instancia/README.md)
+19. [Desafio: Membros Estáticos](./19-desafio-membros-estaticos/README.md)
