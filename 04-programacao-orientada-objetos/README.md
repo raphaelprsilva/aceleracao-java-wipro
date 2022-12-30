@@ -25,3 +25,4 @@ Abaixo, temos os conteúdos da seção.
 19. [Desafio: Membros Estáticos](./19-desafio-membros-estaticos/README.md)
 20. [Constantes com `static` e `final`](./20-constantes-static-final/README.md)
 21. [Sobrecarga de Métodos (Overloading)](./21-sobrecarda-metodos-overloading/README.md)
+22. [Inferência de Tipos em uma Variável Local](./22-inferencia-de-tipo/README.md)
