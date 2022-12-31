@@ -6,3 +6,4 @@ Nessa seção vamos ver um pouco mais sobre classes `Wrapper`, `boxing` e `unbox
 2. [Métodos de conversão](./02-metodos-de-conversao/README.md)
 3. [Comparando Wrappers](./03-comparando-wrappers/README.md)
 4. [Desafio – wrappers e boxing](./04-desafio-wrappers/README.md)
+5. [Boas Práticas - Prefira Tipos Primitivos à Wrappers](./05-boas-praticas/README.md)
