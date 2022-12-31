@@ -4,3 +4,4 @@ Nessa seção vamos ver um pouco mais sobre classes `Wrapper`, `boxing` e `unbox
 
 1. [Usando classes Wrapper](./01-classes-wrapper/README.md)
 2. [Métodos de conversão](./02-metodos-de-conversao/README.md)
+3. [Comparando Wrappers](./03-comparando-wrappers/README.md)
