@@ -17,7 +17,7 @@ Abaixo, temos a trilha a ser percorrida:
 
 [5. 🧹️ Boas Práticas - Código Limpo](./05-boas-praticas-codigo-limpo/README.md)
 
-[6. 🎁️ Wrappers e boxing]()
+[6. 🎁️ Wrappers e boxing](./06-wrappers-e-boxing/README.md)
 
 [7. 📑 Arrays]()
 
