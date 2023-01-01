@@ -6,3 +6,4 @@ Nesta seção, vamos estudar sobre arrays. Vamos entender o que são, por que us
 2. [Acessando e atribuindo elementos de Arrays](./02-acessando-elementos/README.md)
 3. [Iterando Arrays](./03-iterando-arrays/README.md)
 4. [Transformando Arrays em Representações String](./04-representando-arrays/README.md)
+5. [Ordenando Arrays na ordem natural e reversa](./05-ordenando-arrays/README.md)
