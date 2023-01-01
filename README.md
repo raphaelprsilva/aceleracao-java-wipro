@@ -19,7 +19,7 @@ Abaixo, temos a trilha a ser percorrida:
 
 [6. 🎁️ Wrappers e boxing](./06-wrappers-e-boxing/README.md)
 
-[7. 📑 Arrays]()
+[7. 📑 Arrays](./07-arrays/README.md)
 
 [8. 🧠 Gerenciamento de Memória]()
 
