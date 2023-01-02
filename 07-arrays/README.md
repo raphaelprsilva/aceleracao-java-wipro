@@ -9,4 +9,5 @@ Nesta seção, vamos estudar sobre arrays. Vamos entender o que são, por que us
 5. [Ordenando Arrays na ordem natural e reversa](./05-ordenando-arrays/README.md)
 6. [Criando Arrays de Objetos](./06-arrays-de-objetos/README.md)
 7. [Iterando Arrays de Objetos](./07-iterando-arrays-objetos/README.md)
-8. [Copaindo e Expandindo Arrays](./08-copiando-expandindo-arrays/README.md)
+8. [Copiando e Expandindo Arrays](./08-copiando-expandindo-arrays/README.md)
+9. [Removendo Elementos de Arrays](./09-removendo-elementos/README.md)
