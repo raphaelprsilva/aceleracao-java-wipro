@@ -8,3 +8,4 @@ Nesta seção, vamos estudar sobre arrays. Vamos entender o que são, por que us
 4. [Transformando Arrays em Representações String](./04-representando-arrays/README.md)
 5. [Ordenando Arrays na ordem natural e reversa](./05-ordenando-arrays/README.md)
 6. [Criando Arrays de Objetos](./06-arrays-de-objetos/README.md)
+7. [Iterando Arrays de Objetos](./07-iterando-arrays-objetos/README.md)
