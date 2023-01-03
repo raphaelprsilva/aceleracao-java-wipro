@@ -15,3 +15,4 @@ Nesta seção, vamos estudar sobre arrays. Vamos entender o que são, por que us
 11. [Um pouco de ArrayList (Collections API)](./11-ArrayList-CollectionAPI/README.md)
 12. [Desafio - ArrayList](./12-desafio-ArrayList/README.md)
 13. [Arrays Multidimensionais](./13-arrays-multidimensionais/README.md)
+14. [Métodos com `varargs`](./14-metodos-com-varargs/README.md)
