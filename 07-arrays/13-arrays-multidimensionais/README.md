@@ -36,3 +36,29 @@ public class Main {
   }
 }
 ```
+
+## Iterando Arrays Multidimensionais
+
+Para iterar arrays multidimensionais, precisamos de um loop dentro de outro loop. Vamos ver um exemplo:
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    String[][] nomes = new String[2][2];
+
+    // primeira "linha"
+    nomes[0][0] = "João";
+    nomes[0][1] = "Maria";
+
+    // segunda "linha"
+    nomes[1][0] = "José";
+    nomes[1][1] = "Ana";
+
+    for (String[] nomesPorLinha : nomes) {
+      for (String nome : nomesPorLinha) {
+        System.out.println(nome);
+      }
+    }
+  }
+}
+```
