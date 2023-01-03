@@ -16,3 +16,4 @@ Nesta seção, vamos estudar sobre arrays. Vamos entender o que são, por que us
 12. [Desafio - ArrayList](./12-desafio-ArrayList/README.md)
 13. [Arrays Multidimensionais](./13-arrays-multidimensionais/README.md)
 14. [Métodos com `varargs`](./14-metodos-com-varargs/README.md)
+15. [Desafio sobre `varargs`](./15-desafio-varargs/README.md)
