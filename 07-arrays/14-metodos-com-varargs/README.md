@@ -27,3 +27,78 @@ Observação:
 - O `varargs` precisa ser sempre o último parâmetro do método.
 
 Para quem usa ou usou o javascript, é semelhante ao spread parameter, que espalha os valores.
+
+
+## Cuidados ao usar o varargs
+
+Quando se usa `varargs` em um método, o argumento que usa este não é obrigatório. Como assim?
+
+Veja o exemplo abaixo:
+
+```java
+public class ServicoCobranca {
+  //                                  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+  void pagar(Fatura fatura, String... emailsCobranca) {
+    // emailsCobranca é um array
+    System.out.printf("A fatura de número %d, no valor total de R$ %.2f foi paga.%n", fatura.numero, fatura.valorTotal);
+
+    for (String email : emailsCobranca) {
+      System.out.printf("Fatura %d enviada para %s%n", fatura.numero, email);
+    }
+  }
+}
+```
+
+No exemplo acima, `emailsCobranca` não é obrigatório. Se eu chamar o método sem ele, vou obter um erro só na execução. Na compilação não teremos nada.
+
+Isso é um problema.
+
+Veja:
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    Fatura fatura = new Fatura();
+    fatura.numero = 123;
+    fatura.valorTotal = 1_345.23;
+
+    ServicoCobranca servicoCobranca = new ServicoCobranca();
+
+    // Gera erro de execução. Na compilação passa tranquilamente
+    servicoCobranca.pagar(fatura);
+  }
+}
+```
+
+Como resolver isso?
+
+Adicionando um parâmetro a mais no método. Esse parâmetro irá ser obrigatório ao chamar o método e
+irá gerar um erro durante a compilação, caso não seja passado.
+
+Veja:
+
+```java
+import java.util.Objects;
+
+public class ServicoCobranca {
+  //  novo parâmetro adicionado    ↓↓↓↓↓↓↓↓↓↓↓↓↓
+  void pagar(Fatura fatura, String emailCobranca, String... emailsCobranca) {
+    // Obriga a passagem os parâmetros
+    Objects.requireNonNull(emailCobranca, "Informe o email de cobrança");
+    Objects.requireNonNull(fatura, "Informe a fatura");
+
+    System.out.printf("A fatura de número %d, no valor total de R$ %.2f foi paga.%n", fatura.numero, fatura.valorTotal);
+
+    this.enviarNotificacao(fatura, emailCobranca);
+
+    for (String email : emailsCobranca) {
+      this.enviarNotificacao(fatura, email);
+    }
+  }
+
+  // criamos um método privado para notificação
+  private void enviarNotificacao(Fatura fatura, String email) {
+    System.out.printf("Fatura %d enviada para %s%n", fatura.numero, email);
+  }
+}
+```
