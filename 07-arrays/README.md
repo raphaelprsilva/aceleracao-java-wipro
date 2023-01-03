@@ -13,3 +13,4 @@ Nesta seção, vamos estudar sobre arrays. Vamos entender o que são, por que us
 9. [Removendo Elementos de Arrays](./09-removendo-elementos/README.md)
 10. [Desafio - Arrays](./10-desafio-arrays/README.md)
 11. [Um pouco de ArrayList (Collections API)](./11-ArrayList-CollectionAPI/README.md)
+12. [Desafio - ArrayList](./12-desafio-ArrayList/README.md)
