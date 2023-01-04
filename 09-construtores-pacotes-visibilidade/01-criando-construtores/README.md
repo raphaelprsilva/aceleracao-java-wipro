@@ -215,3 +215,89 @@ public class Produto {
   }
 }
 ```
+
+## Mofificador `final` em atributos de instância
+
+Imagine no nosso contexto da classe `Produto` que cada produto agora deve ter um código. Esse código não pode ser modificado
+após a instanciação de um novo produto. Como fazemos isso?
+
+- Devemos usar o modificador de acesso `final`;
+
+```java
+import java.util.Objects;
+
+public class Produto {
+  static final int QUANTIDADE_PADRAO_INICIAL_EM_ESTOQUE = 50;
+
+  // inseri o atributo aqui. Ele não poderá ser alterado
+  final String codigo;
+  String nome;
+  int quantidadeEstoque;
+
+  Produto() {
+    this("Sem nome");
+  }
+
+  Produto(String nome) {
+    this(nome, QUANTIDADE_PADRAO_INICIAL_EM_ESTOQUE);
+  }
+
+  Produto(String nome, int quantidadeEstoque) {
+    Objects.requireNonNull(nome, "O nome do produto é obrigatório.");
+
+    if (this.quantidadeEstoque < 0) {
+      throw new IllegalArgumentException("A quantidade em estoque não pode ser negativa");
+    }
+
+    this.nome = nome;
+    this.quantidadeEstoque = quantidadeEstoque;
+    // atribui um valor ao código
+    this.codigo = "ASD123";
+  }
+}
+```
+
+Mas da forma como fizemos, todo produto terá o mesmo código "ASD123", e isso não é algo viável.
+
+Como geramos então um código único e que dificilmente irá se repetir? Usando a classe `UUID`.
+
+Veja abaixo:
+
+```java
+import java.util.Objects;
+import java.util.UUID;
+
+public class Produto {
+  static final int QUANTIDADE_PADRAO_INICIAL_EM_ESTOQUE = 50;
+
+  final String codigo;
+  String nome;
+  int quantidadeEstoque;
+
+  Produto() {
+    this("Sem nome");
+  }
+
+  Produto(String nome) {
+    this(nome, QUANTIDADE_PADRAO_INICIAL_EM_ESTOQUE);
+  }
+
+  Produto(String nome, int quantidadeEstoque) {
+    Objects.requireNonNull(nome, "O nome do produto é obrigatório.");
+
+    if (this.quantidadeEstoque < 0) {
+      throw new IllegalArgumentException("A quantidade em estoque não pode ser negativa");
+    }
+
+    this.nome = nome;
+    this.quantidadeEstoque = quantidadeEstoque;
+    this.codigo = UUID.randomUUID().toString(); // repare aqui
+  }
+
+  void imprimirInformacoes() {
+    System.out.printf("Nome: %s%n", this.nome);
+    System.out.printf("Quantidade Estoque: %d%n", this.quantidadeEstoque);
+    System.out.printf("Código Produto: %s%n", this.codigo);
+  }
+}
+```

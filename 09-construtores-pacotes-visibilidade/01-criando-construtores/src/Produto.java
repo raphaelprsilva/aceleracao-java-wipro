@@ -1,8 +1,10 @@
 import java.util.Objects;
+import java.util.UUID;
 
 public class Produto {
   static final int QUANTIDADE_PADRAO_INICIAL_EM_ESTOQUE = 50;
 
+  final String codigo;
   String nome;
   int quantidadeEstoque;
 
@@ -23,5 +25,12 @@ public class Produto {
 
     this.nome = nome;
     this.quantidadeEstoque = quantidadeEstoque;
+    this.codigo = UUID.randomUUID().toString();
+  }
+
+  void imprimirInformacoes() {
+    System.out.printf("Nome: %s%n", this.nome);
+    System.out.printf("Quantidade Estoque: %d%n", this.quantidadeEstoque);
+    System.out.printf("Código Produto: %s%n", this.codigo);
   }
 }
