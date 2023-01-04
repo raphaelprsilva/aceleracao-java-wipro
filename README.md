@@ -21,7 +21,7 @@ Abaixo, temos a trilha a ser percorrida:
 
 [7. 📑 Arrays](./07-arrays/README.md)
 
-[8. 🧠 Gerenciamento de Memória]()
+[8. 🧠 Gerenciamento de Memória](./08-gerenciamento-memoria/README.md)
 
 [9. 🪟 Construtores e visibilidade]()
 
