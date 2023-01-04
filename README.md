@@ -23,7 +23,7 @@ Abaixo, temos a trilha a ser percorrida:
 
 [8. 🧠 Gerenciamento de Memória](./08-gerenciamento-memoria/README.md)
 
-[9. 🪟 Construtores e visibilidade]()
+[9. 🪟 Construtores e visibilidade](./09-construtores-pacotes-visibilidade/README.md)
 
 [10. 💾 Encapsulamento, JavaBeans e Records]()
 
