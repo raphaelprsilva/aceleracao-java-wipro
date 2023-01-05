@@ -5,3 +5,4 @@
 3. [Pacotes - Organizando Classes](./03-pacotes/README.md)
 4. [Modificadores de Acesso](./04-modificadores-de-acesso/README.md)
 5. [Desafio - Pacotes e Modificadores de Acesso](./05-desafio-pacotes/README.md)
+6. [Importando membros estáticos](./06-importando-membros-estaticos/README.md)
