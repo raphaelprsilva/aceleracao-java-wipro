@@ -25,7 +25,7 @@ Abaixo, temos a trilha a ser percorrida:
 
 [9. 🪟 Construtores e visibilidade](./09-construtores-pacotes-visibilidade/README.md)
 
-[10. 💾 Encapsulamento, JavaBeans e Records]()
+[10. 💾 Encapsulamento, JavaBeans e Records](./10-encapsulamento/README.md)
 
 [11. 💰 Herança]()
 
