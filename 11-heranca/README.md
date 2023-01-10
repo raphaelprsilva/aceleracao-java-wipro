@@ -37,6 +37,21 @@ Veja o código da classe `Conta`. Você verá que ao criarmos uma classe dessa m
 Agora vamos criar outras classes, tais como: `ContaEspecial` e `ContaInvestimento`. Além disso,
 vamos isolar suas responsabilidades.
 
+Nossa estrutura ficaria assim:
+
+```
+src/
+├── br/
+│   └── com/
+│       └── elraphael/
+│           └── banco/
+│               ├── Conta.java
+│               ├── ContaEspecial.java ✅
+│               ├── ContaInvestimento.java ✅
+│               └── Titular.java
+└── Main.java          
+```
+
 Mas, criando essas outras duas classes, vamos percebendo que também estamos duplicando muito código.
 
 Existe muita coisa em comum em ambas as classes de conta.
