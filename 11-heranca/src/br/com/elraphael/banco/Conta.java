@@ -35,14 +35,25 @@ public class Conta {
     return saldo;
   }
 
-  public void sacar(double valorSaque) {
-    if (valorSaque <= 0) {
-      throw new IllegalArgumentException("Valor do saque deve ser maior que 0");
-    }
+  protected void setSaldo(double saldo) {
+    this.saldo = saldo;
+  }
 
+  protected void validarSaldoParaSaque(double valorSaque) {
     if (this.getSaldo() < valorSaque) {
       throw new RuntimeException("Saldo insuficiente para saque");
     }
+  }
+
+  protected void checarValorSaquePositivo(double valorSaque) {
+    if (valorSaque <= 0) {
+      throw new IllegalArgumentException("Valor do saque deve ser maior que 0");
+    }
+  }
+
+  public void sacar(double valorSaque) {
+    this.checarValorSaquePositivo(valorSaque);
+    this.validarSaldoParaSaque(valorSaque);
 
     saldo -= valorSaque;
   }

@@ -21,6 +21,25 @@ public class ContaEspecial extends ContaInvestimento {
     this.limiteChequeEspecial = limiteChequeEspecial;
   }
 
+  public double getSaldoDisponivel() {
+    return this.getSaldo() + this.getLimiteChequeEspecial();
+  }
+
+  protected void validarSaldoParaSaque(double valorSaque) {
+    if (this.getSaldoDisponivel() < valorSaque) {
+      throw new RuntimeException("Saldo insuficiente para saque");
+    }
+  }
+
+  public void imprimirDemonstrativo() {
+    System.out.println();
+    System.out.printf("Agência: %d%n", getAgencia());
+    System.out.printf("Conta: %d%n", getNumero());
+    System.out.printf("Titular: %s%n", getTitular().getNome());
+    System.out.printf("Saldo: %.2f%n", getSaldo());
+    System.out.printf("Saldo Disponível: %.2f%n", getSaldoDisponivel());
+  }
+
   public void debitarTarifaMensal() {
     sacar(this.getTarifaMensal());
   }

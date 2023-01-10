@@ -118,3 +118,49 @@ Observações:
 
 1. Uma classe só pode herdar somente comportamentos e atributos de outra classe
 2. Não use herança apenas para reaproveitamento de código, isso pode gerar problemas
+
+## Sobrescrita de métodos
+
+A nossa classe `ContaEspecial` possui um atributo `limiteChequeEspecial` que define uma quantidade
+do cheque especial. Porém, ao chamarmos o método `imprimirDemonstrativo`, o saldo aparecerá zerado,
+pois estamos usando o método `imprimirDemonstrativo` da classe `Conta` (herança).
+
+Isso é um problema, não é? E como resolvemos? Usando a sobrescrita de métodos.
+
+Para ser uma sobrescrita:
+
+1. O método deve ter a mesma assinatura do método da classe mãe
+   1. Mesmo nome
+   2. Mesmos parâmetros
+   3. Mesmo retorno
+
+Lembre-se:
+   1. Sobrescrita é diferente de sobrecarga
+   2. Na sobrecarga, o método tem o mesmo nome, porém com parâmetros diferentes
+
+Método `imprimirDemonstrativo` da classe `Conta`:
+
+```java
+  public void imprimirDemonstrativo() {
+    System.out.println();
+    System.out.printf("Agência: %d%n", getAgencia());
+    System.out.printf("Conta: %d%n", getNumero());
+    System.out.printf("Titular: %s%n", getTitular().getNome());
+    System.out.printf("Saldo: %.2f%n", getSaldo());
+  }
+```
+
+Método `imprimirDemonstrativo` da classe `ContaEspecial`:
+
+```java
+  public void imprimirDemonstrativo() {
+    System.out.println();
+    System.out.printf("Agência: %d%n", getAgencia());
+    System.out.printf("Conta: %d%n", getNumero());
+    System.out.printf("Titular: %s%n", getTitular().getNome());
+    System.out.printf("Saldo: %.2f%n", getSaldo());
+    System.out.printf("Saldo Disponível: %.2f%n", getSaldoDisponivel()); // linha adicionada
+  }
+```
+
+Espera... Ainda sim, estamos repetindo muito código. 
