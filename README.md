@@ -27,7 +27,7 @@ Abaixo, temos a trilha a ser percorrida:
 
 [10. 💾 Encapsulamento, JavaBeans e Records](./10-encapsulamento/README.md)
 
-[11. 💰 Herança]()
+[11. 💰 Herança](./11-heranca/README.md)
 
 [12. ⚗️ Polimorfismo]()
 
