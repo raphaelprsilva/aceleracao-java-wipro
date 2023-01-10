@@ -1,11 +1,15 @@
 package br.com.elraphael.banco;
 
-public class Conta {
+public class ContaEspecial {
 
   private Titular titular;
   private int agencia;
   private int numero;
   private double saldo;
+
+  private double valorTotalRendimentos;
+  private double tarifaMensal;
+  private double limiteChequeEspecial;
 
   public Titular getTitular() {
     return titular;
@@ -35,12 +39,42 @@ public class Conta {
     return saldo;
   }
 
+  public double getSaldoDisponivel() {
+    return this.getSaldo() + this.getLimiteChequeEspecial();
+  }
+
+  public double getValorTotalRendimentos() {
+    return valorTotalRendimentos;
+  }
+
+  public double getTarifaMensal() {
+    return tarifaMensal;
+  }
+
+  public void setTarifaMensal(double tarifaMensal) {
+    this.tarifaMensal = tarifaMensal;
+  }
+
+  public double getLimiteChequeEspecial() {
+    return limiteChequeEspecial;
+  }
+
+  public void setLimiteChequeEspecial(double limiteChequeEspecial) {
+    this.limiteChequeEspecial = limiteChequeEspecial;
+  }
+
+  public void creditarRendimentos(double percentualJuros) {
+    double valorRendimentos = this.getSaldo() * percentualJuros / 100;
+    this.saldo += valorRendimentos;
+    this.depositar(valorRendimentos);
+  }
+
   public void sacar(double valorSaque) {
     if (valorSaque <= 0) {
       throw new IllegalArgumentException("Valor do saque deve ser maior que 0");
     }
 
-    if (this.getSaldo() < valorSaque) {
+    if (this.getSaldoDisponivel() < valorSaque) {
       throw new RuntimeException("Saldo insuficiente para saque");
     }
 
@@ -61,5 +95,10 @@ public class Conta {
     System.out.printf("Conta: %d%n", getNumero());
     System.out.printf("Titular: %s%n", getTitular().getNome());
     System.out.printf("Saldo: %.2f%n", getSaldo());
+    System.out.printf("Saldo disponível: %.2f%n", getSaldoDisponivel());
+  }
+
+  public void debitarTarifaMensal() {
+    sacar(this.getTarifaMensal());
   }
 }

@@ -31,3 +31,16 @@ Veja o código da classe `Conta`. Você verá que ao criarmos uma classe dessa m
 - Maior uso de memória
 - Imagine se tivéssemos outros tipos de contas bancárias
 - Então, essa não é uma boa prática
+
+## Duplicando classes e Isolando comportamentos
+
+Agora vamos criar outras classes, tais como: `ContaEspecial` e `ContaInvestimento`. Além disso,
+vamos isolar suas responsabilidades.
+
+Mas, criando essas outras duas classes, vamos percebendo que também estamos duplicando muito código.
+
+Existe muita coisa em comum em ambas as classes de conta.
+
+Agora imagine novamente se tivéssemos novos tipos de conta?
+
+Podemos resolver isso com **Herança**!
