@@ -59,3 +59,62 @@ Existe muita coisa em comum em ambas as classes de conta.
 Agora imagine novamente se tivéssemos novos tipos de conta?
 
 Podemos resolver isso com **Herança**!
+
+## Herança
+
+A herança é um dos pilares da programação orientada a objetos. Você pode perceber que:
+
+1. A classe `Conta` possui os seguintes atributos e métodos:
+   1. **Atributos**
+      1. titular
+      2. agencia
+      3. numero
+      4. saldo
+   2. **Métodos**
+      1. sacar
+      2. depositar
+      3. imprimirDemonstrativo
+2. A classe `ContaInvestimento` possui os seguintes atributos e métodos:
+   1. **Atributos**
+      1. titular
+      2. agencia
+      3. numero
+      4. saldo
+      5. valorTotalRendimentos
+   2. **Métodos**
+      1. sacar
+      2. depositar
+      3. imprimirDemonstrativo
+      4. creditarRendimentos
+3. A classe `ContaEspecial` possui os seguintes atributos e métodos:
+   1. **Atributos**
+      1. titular
+      2. agencia
+      3. numero
+      4. saldo
+      5. valorTotalRendimentos
+      6. tarifaMensal
+      7. limiteChequeEspecial
+   2. **Métodos**
+      1. sacar
+      2. depositar
+      3. imprimirDemonstrativo
+      4. creditarRendimentos
+      5. creditarTarifaMensal
+
+Repare que em ambas as classes, temos tanto atributos quanto métodos repetidos.
+
+Vamos usar a herança para resolver esse problema.
+
+Para isso vamos seguir a seguinte lógica:
+
+1. Uma `Conta` tem um `Titular` (composição)
+2. Uma `ContaInvestimento` é um tipo de `Conta`, portanto pode herdar os comportamentos a atributos da última;
+3. Uma `ContaEspecial` é um tipo de `ContaInvestimento`, portanto pode herdar os comportamentos a atributos da última;
+
+![Herança](./heranca.png)
+
+Observações:
+
+1. Uma classe só pode herdar somente comportamentos e atributos de outra classe
+2. Não use herança apenas para reaproveitamento de código, isso pode gerar problemas
