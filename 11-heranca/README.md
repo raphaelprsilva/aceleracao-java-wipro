@@ -222,7 +222,8 @@ public class ContaEspecial {
 
 ## Invocando construtores da superclasse
 
-- Mesmo que não deixemos de maneira explícita os construtores de classes que herdam outras classes, eles são chamados por padrão;
+- Mesmo que não deixemos de maneira explícita os construtores de classes que herdam outras classes, eles são chamados
+  por padrão;
 - Se não formos passar nenhum atributo na hora de instanciar um novo objeto, não precisamos escrever um novo construtor
 - Mas poderíamos, caso fosse necessário. Essa é a sintaxe:
 
@@ -235,3 +236,27 @@ public class ContaEspecial {
   // ...
 }
 ```
+
+## Sobrescrevendo métodos da classe `Object`
+
+- Vamos sobrescrever o método `toString` da classe `Object`
+- Isso é bom para vermos o que temos no objeto, de maneira legível
+
+```java
+public class Conta {
+  // ...
+  @Override
+  public String toString() {
+    return "Conta{" +
+        "titular=" + titular +
+        ", agencia=" + agencia +
+        ", numero=" + numero +
+        ", saldo=" + saldo +
+        '}';
+  }
+}
+```
+
+- Use o método para fins de log de dados simples
+- Não coloque nada pesado ou algo que gere um NullPointException
+- Implemente sempre que possível o método `toString`

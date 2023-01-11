@@ -17,4 +17,14 @@ public class ContaInvestimento extends Conta {
     this.valorTotalRendimentos += valorRendimentos;
     this.depositar(valorRendimentos);
   }
+
+  @Override
+  public String toString() {
+    return "ContaInvestimento{" +
+        "titular=" + this.getTitular() +
+        ", agencia=" + this.getAgencia() +
+        ", numero=" + this.getNumero() +
+        ", valorTotalRendimentos=" + valorTotalRendimentos +
+        '}';
+  }
 }

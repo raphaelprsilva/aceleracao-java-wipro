@@ -46,4 +46,16 @@ public class ContaEspecial extends ContaInvestimento {
   public void debitarTarifaMensal() {
     sacar(this.getTarifaMensal());
   }
+
+  @Override
+  public String toString() {
+    return "ContaEspecial{" +
+        "titular=" + this.getTitular() +
+        ", agencia=" + this.getAgencia() +
+        ", numero=" + this.getNumero() +
+        ", valotTotalRendimentos=" + this.getValorTotalRendimentos() +
+        ", tarifaMensal=" + tarifaMensal +
+        ", limiteChequeEspecial=" + limiteChequeEspecial +
+        '}';
+  }
 }

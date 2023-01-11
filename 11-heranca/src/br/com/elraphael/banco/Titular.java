@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Titular {
 
   private String nome;
-  private String cpf;
+  private final String cpf;
 
   public Titular(String nome, String cpf) {
     Objects.requireNonNull(nome);
@@ -27,4 +27,10 @@ public class Titular {
     return cpf;
   }
 
+  @Override
+  public String toString() {
+    return "Titular{" +
+        "nome='" + nome + '\'' +
+        '}';
+  }
 }
