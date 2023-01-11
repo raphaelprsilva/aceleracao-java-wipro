@@ -219,3 +219,19 @@ public class ContaEspecial {
 - Mas geralmetne não usamos `public class Conta extends Object`, pois é algo implícito
 - Ela possui alguns métodos
 - É possível instanciá-la normalmente como qualquer outra classe
+
+## Invocando construtores da superclasse
+
+- Mesmo que não deixemos de maneira explícita os construtores de classes que herdam outras classes, eles são chamados por padrão;
+- Se não formos passar nenhum atributo na hora de instanciar um novo objeto, não precisamos escrever um novo construtor
+- Mas poderíamos, caso fosse necessário. Essa é a sintaxe:
+
+```java
+public class ContaEspecial {
+  public ContaEspecial() {
+    super();
+  }
+
+  // ...
+}
+```

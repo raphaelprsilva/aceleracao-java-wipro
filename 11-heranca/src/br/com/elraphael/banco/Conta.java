@@ -7,6 +7,10 @@ public class Conta {
   private int numero;
   private double saldo;
 
+  public Conta(double saldoInicial) {
+    this.saldo = saldoInicial;
+  }
+
   public Titular getTitular() {
     return titular;
   }
