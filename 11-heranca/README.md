@@ -212,3 +212,10 @@ public class ContaEspecial {
   }
 }
 ```
+
+## A classe `Object`
+
+- Toda classe herda outra classe, que no caso é a `Object`. Essa é a classe raiz.
+- Mas geralmetne não usamos `public class Conta extends Object`, pois é algo implícito
+- Ela possui alguns métodos
+- É possível instanciá-la normalmente como qualquer outra classe
