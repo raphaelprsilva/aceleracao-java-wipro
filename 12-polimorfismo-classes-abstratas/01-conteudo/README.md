@@ -37,3 +37,108 @@ public class Main {
 
 Entenda o `Upcasting` como uma forma de converter um objeto de uma classe para outra.
 
+
+
+## O problema que o polimorfismo resolve
+
+Vamos implementar uma classe que representa um caixa eletrônico.
+
+```java
+package br.com.elraphael.banco;
+
+public class CaixaEletronico {
+  private static final double TARIFA_TRANSFERENCIA = 10;
+
+  public void transferir(ContaEspecial contaOrigem, ContaEspecial contaDestino, double valorTransferencia) {
+    System.out.printf("Transferindo R$%.2f da conta %d/%d para %d/%d%n",
+        valorTransferencia, contaOrigem.getAgencia(), contaOrigem.getNumero(),
+        contaDestino.getAgencia(), contaDestino.getNumero());
+
+    contaOrigem.sacar(valorTransferencia + TARIFA_TRANSFERENCIA);
+    contaDestino.depositar(valorTransferencia);
+  }
+}
+```
+
+Para transferir dinheiro de uma conta para a outra:
+
+```java
+import br.com.elraphael.banco.CaixaEletronico;
+import br.com.elraphael.banco.Conta;
+import br.com.elraphael.banco.ContaEspecial;
+import br.com.elraphael.banco.Titular;
+
+public class Main {
+  public static void main(String[] args) {
+    CaixaEletronico caixaEletronico = new CaixaEletronico();
+
+    Titular raphael = new Titular("Raphael", "11122233344");
+    Titular rodrigo = new Titular("Rodrigo", "19234323312");
+
+    ContaEspecial contaRaphael = new ContaEspecial(raphael, 555, 123, 5);
+    ContaEspecial contaRodrigo = new ContaEspecial(rodrigo, 322, 444, 10);
+
+    contaRaphael.depositar(100);
+
+    caixaEletronico.transferir(contaRaphael, contaRodrigo, 50);
+    contaRaphael.imprimirDemonstrativo();
+    contaRodrigo.imprimirDemonstrativo();
+  }
+}
+```
+
+Mas, e se eu desejasse transferir de uma conta salário para uma conta especial?
+
+Eu poderia criar uma sobrecarga de métodos. Mas eu teria que basicamente repetir o método `transferir`
+com uma assinatura diferente. O que é código duplicado e rígido.
+
+É aí que o polimorfismo entra.
+
+**Poli**: várias
+
+**Morfismo**: formas
+
+Então o nosso método `transferir` pode sair disso:
+
+```java
+package br.com.elraphael.banco;
+
+public class CaixaEletronico {
+  private static final double TARIFA_TRANSFERENCIA = 10;
+
+  //                     ↓↓↓↓↓↓↓↓↓↓↓↓↓              ↓↓↓↓↓↓↓↓↓↓↓↓↓
+  public void transferir(ContaEspecial contaOrigem, ContaEspecial contaDestino, double valorTransferencia) {
+    System.out.printf("Transferindo R$%.2f da conta %d/%d para %d/%d%n",
+        valorTransferencia, contaOrigem.getAgencia(), contaOrigem.getNumero(),
+        contaDestino.getAgencia(), contaDestino.getNumero());
+
+    contaOrigem.sacar(valorTransferencia + TARIFA_TRANSFERENCIA);
+    contaDestino.depositar(valorTransferencia);
+  }
+}
+```
+
+Para isso:
+
+```java
+package br.com.elraphael.banco;
+
+public class CaixaEletronico {
+  private static final double TARIFA_TRANSFERENCIA = 10;
+
+  //                     ↓↓↓↓↓              ↓↓↓↓↓
+  public void transferir(Conta contaOrigem, Conta contaDestino, double valorTransferencia) {
+    System.out.printf("Transferindo R$%.2f da conta %d/%d para %d/%d%n",
+        valorTransferencia, contaOrigem.getAgencia(), contaOrigem.getNumero(),
+        contaDestino.getAgencia(), contaDestino.getNumero());
+
+    contaOrigem.sacar(valorTransferencia + TARIFA_TRANSFERENCIA);
+    contaDestino.depositar(valorTransferencia);
+  }
+}
+```
+
+Isso significa que eu poderei tranferir o dinheiro, independentemente do tipo de conta, pois todas as
+demais contas extendem a classe `Conta`. Ou seja, está sendo feito o upcasting implicitamente.
+
+Então, polimorfismo pode ser usado assim.
