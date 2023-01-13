@@ -29,7 +29,7 @@ Abaixo, temos a trilha a ser percorrida:
 
 [11. 💰 Herança](./11-heranca/README.md)
 
-[12. ⚗️ Polimorfismo]()
+[12. ⚗️ Polimorfismo](./12-polimorfismo-classes-abstratas/README.md)
 
 [13. 🎭 Interfaces]()
 
