@@ -1,10 +1,12 @@
 package br.com.elraphael.banco;
 
+import java.util.Objects;
+
 public class Conta {
 
-  private Titular titular;
-  private int agencia;
-  private int numero;
+  private final Titular titular;
+  private final int agencia;
+  private final int numero;
   private double saldo;
 
   public Conta(Titular titular, int agencia, int numero) {
@@ -73,5 +75,18 @@ public class Conta {
         ", numero=" + numero +
         ", saldo=" + saldo +
         '}';
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null || getClass() != obj.getClass()) return false;
+    Conta conta = (Conta) obj;
+    return agencia == conta.agencia && numero == conta.numero && Double.compare(conta.saldo, saldo) == 0 && Objects.equals(titular, conta.titular);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(titular, agencia, numero, saldo);
   }
 }

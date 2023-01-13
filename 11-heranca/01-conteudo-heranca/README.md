@@ -257,3 +257,88 @@ public class Conta {
 - Use o método para fins de log de dados simples
 - Não coloque nada pesado ou algo que gere um NullPointException
 - Implemente sempre que possível o método `toString`
+
+## Comparando objetos
+
+Se eu fizer isso:
+
+```java
+import br.com.elraphael.banco.Conta;
+
+public class Main {
+  public static void main(String[] args) {
+    Conta conta1 = new Conta("Raphael", 12342);
+    Conta conta2 = conta1;
+
+    System.out.println(conta1 == conta2); // true
+  }
+}
+```
+
+O objeto `conta2` apontará para a mesma referência de `conta1`.
+
+E se eu quiser comparar o conteúdo dos objetos, e não a referência?
+
+```java
+import br.com.elraphael.banco.Conta;
+
+public class Main {
+  public static void main(String[] args) {
+    Conta conta1 = new Conta("Raphael", 12342);
+    Conta conta2 = new Conta("Raphael", 12342);
+
+    System.out.println(conta1 == conta2); // false
+  }
+}
+```
+
+Por que deu `false`? Porque o operador `==` compara a referência na memória e não o conteúdo dos objetos.
+
+Para isso, existe um método `equals` da classe `Object`.
+
+Mas para usarmos ele, é preciso sobrescrevê-lo em alguma classe.
+
+Sobrescrevemos o método `equals` da classe `Object`.
+
+```java
+public class Conta {
+  // ...
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null || this.getClass() != obj.getClass()) return false;
+    Conta conta = (Conta) obj;
+    return agencia == conta.agencia && numero == conta.numero && Double.compare(conta.saldo, saldo) == 0 && Objects.equals(titular, conta.titular);
+  }
+}
+```
+
+Agora sim, podemos comparar o conteúdo de dois objetos:
+
+```java
+import br.com.elraphael.banco.Conta;
+
+public class Main {
+  public static void main(String[] args) {
+    Conta conta1 = new Conta("Raphael", 12342);
+    Conta conta2 = new Conta("Raphael", 12342);
+
+    System.out.println(conta1.equals(conta2)); // true
+  }
+}
+```
+
+Sendo assim:
+
+1. Sempre que comparamos a mesma referência, deve ser retornado `true`.
+   1. `conta1.equals(conta1)` = `true`
+2. Deve ser simétrico, ou seja:
+   1. Se `conta1.equals(conta2)` = `true`
+   2. `conta2.equals(conta1)` = `true`
+3. Tem que ser transitivo:
+   1. Se `conta1.equals(conta2)` = `true`
+   2. E `conta2.equals(conta3)` = `true`
+   3. Então `conta1.equals(conta3)` = `true`
+4. Deve ser consistente, ou seja, não variar
+5. Se comparar com `null`, o retorno deve ser `false`
