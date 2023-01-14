@@ -142,3 +142,12 @@ Isso significa que eu poderei tranferir o dinheiro, independentemente do tipo de
 demais contas extendem a classe `Conta`. Ou seja, está sendo feito o upcasting implicitamente.
 
 Então, polimorfismo pode ser usado assim.
+
+## Downcasting de referências
+
+O downcasting é o processo inverso do upcasting. Ou seja, é o processo de converter um objeto de uma
+classe mais genérica para uma classe mais específica.
+
+Podemos usar o instanceof para verificar se um objeto é uma instância de uma classe.
+
+Veja o código da classe `CaixaEletronico`.

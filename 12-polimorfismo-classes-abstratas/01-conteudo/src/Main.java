@@ -1,7 +1,4 @@
-import br.com.elraphael.banco.CaixaEletronico;
-import br.com.elraphael.banco.Conta;
-import br.com.elraphael.banco.ContaEspecial;
-import br.com.elraphael.banco.Titular;
+import br.com.elraphael.banco.*;
 
 public class Main {
   public static void main(String[] args) {
@@ -16,7 +13,6 @@ public class Main {
     contaRaphael.depositar(100);
 
     caixaEletronico.transferir(contaRaphael, contaRodrigo, 50);
-    contaRaphael.imprimirDemonstrativo();
-    contaRodrigo.imprimirDemonstrativo();
+    caixaEletronico.imprimirDemonstrativo(contaRaphael);
   }
 }

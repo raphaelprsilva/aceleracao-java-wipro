@@ -1,4 +1,5 @@
-package br.com.elraphael.banco;
+package br.com.elraphael.banco;  public ContaSalario(br.com.elraphael.banco.Titular rodrigo, int agencia, int numero, double salarioMensal) {
+  }
 
 public class ContaSalario extends Conta {
   private double salarioMensal;
