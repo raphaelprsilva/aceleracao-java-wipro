@@ -151,3 +151,25 @@ classe mais genérica para uma classe mais específica.
 Podemos usar o instanceof para verificar se um objeto é uma instância de uma classe.
 
 Veja o código da classe `CaixaEletronico`.
+
+Usando o `instanceof` temos:
+
+```java
+package br.com.elraphael.banco;
+
+public class CaixaEletronico {
+  // ...
+
+  public void imprimirDemonstrativo(Conta conta) {
+    if (conta instanceof ContaInvestimento contaInvestimento &&
+        contaInvestimento.getValorTotalRendimentos() > 0
+    ) {
+      System.out.println("Impressão de demonstração é gratuíta");
+    } else {
+      debitarTarifaImpressaoDemonstrativo(conta);
+    }
+  }
+
+  // ...
+}
+```
