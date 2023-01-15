@@ -14,13 +14,12 @@ public class CaixaEletronico {
   }
 
   public void imprimirDemonstrativo(Conta conta) {
-    if (conta instanceof ContaInvestimento contaInvestimento &&
-        contaInvestimento.getValorTotalRendimentos() > 0
-    ) {
+    if (conta.possuiImpressaoGratuita()) {
       System.out.println("Impressão de demonstração é gratuíta");
     } else {
       debitarTarifaImpressaoDemonstrativo(conta);
     }
+    conta.imprimirDemonstrativo();
   }
 
   private void debitarTarifaImpressaoDemonstrativo(Conta conta) {

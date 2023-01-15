@@ -173,3 +173,11 @@ public class CaixaEletronico {
   // ...
 }
 ```
+
+## Por que evitar o uso do `instanceof`?
+
+Mas nem sempre o uso de instanceof é uma boa ideia.
+
+Com ele você perde a flexibilidade do polimorfismo.
+
+Então, veja o código introduzido na classe `Conta`, `CaixaEletronico` e `ContaInvestimento`.
