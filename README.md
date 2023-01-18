@@ -31,7 +31,7 @@ Abaixo, temos a trilha a ser percorrida:
 
 [12. ⚗️ Polimorfismo](./12-polimorfismo-classes-abstratas/README.md)
 
-[13. 🎭 Interfaces]()
+[13. 🎭 Interfaces](./13-interfaces/README.md)
 
 [14. 🤿 Mergulhando em Heranças e Interfaces]()
 
