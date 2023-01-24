@@ -14,3 +14,17 @@ dinheiro para as empresas.
 
 - `ParceiroFinanceiro` também é uma empresa, mas não é uma empresa qualquer, é uma empresa que empresta dinheiro para outras empresas.
 - Só que, à partir daí surge outro problema. Como `ParceiroFinanceiro` é uma empresa, ele também precisa implementar os métodos abstratos de `Empresa`.
+
+## Métodos default em interfaces
+
+Imagine que você precisa adicionar um novo método a uma interface que já está em uso. Se você fizer isso, o código existente que implementa essa interface não compilará, pois não há implementação para o novo método.
+
+Ou seja, você terá que alterar o código existente para implementar o novo método. Isso pode ser um problema, pois você não pode alterar o código existente.
+
+Os métodos default em interfaces foram introduzidos no Java 8. Eles permitem que você defina um método comum em uma interface, sem quebrar o código existente.
+
+São métodos que podem ser sobrescritos nas classes que implementam a interface.
+
+Eles não são obrigados a implementar os métodos default, mas podem sobrescrevê-los.
+
+Use-as com moderação, pois elas podem dificultar a manutenção do código. É uma ferramenta que deve ser usada com cuidado.
