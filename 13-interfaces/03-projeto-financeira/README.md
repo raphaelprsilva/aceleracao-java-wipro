@@ -28,3 +28,55 @@ São métodos que podem ser sobrescritos nas classes que implementam a interface
 Eles não são obrigados a implementar os métodos default, mas podem sobrescrevê-los.
 
 Use-as com moderação, pois elas podem dificultar a manutenção do código. É uma ferramenta que deve ser usada com cuidado.
+
+## Métodos estáticos em interfaces
+
+Os métodos estáticos em interfaces foram introduzidos no Java 8. Eles permitem que você defina um método estático em uma interface.
+
+Eles não podem ser sobrescritos nas classes que implementam a interface.
+
+## Métodos privados em interfaces
+
+Os métodos privados em interfaces foram introduzidos no Java 9. Eles permitem que você defina um método privado em uma interface.
+
+Eles não podem ser sobrescritos nas classes que implementam a interface.
+
+```java
+public interface InterfaceComMetodosPrivados {
+    default void metodoDefault() {
+        metodoPrivado();
+    }
+
+    private void metodoPrivado() {
+        System.out.println("Método privado");
+    }
+}
+```
+
+## Interfaces extendendo outras interfaces
+
+As interfaces podem extender outras interfaces. Isso permite que você defina uma interface que herda de outra interface.
+
+Isso garante uma maior coesão e reutilização de código.
+
+```java
+public interface Interface1 {
+    void metodo1();
+}
+
+public interface Interface2 extends Interface1 {
+    void metodo2();
+}
+
+public class Classe implements Interface2 {
+    @Override
+    public void metodo1() {
+        System.out.println("Implementação do método 1");
+    }
+
+    @Override
+    public void metodo2() {
+        System.out.println("Implementação do método 2");
+    }
+}
+```
