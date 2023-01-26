@@ -33,7 +33,7 @@ Abaixo, temos a trilha a ser percorrida:
 
 [13. 🎭 Interfaces](./13-interfaces/README.md)
 
-[14. 🤿 Mergulhando em Heranças e Interfaces]()
+[14. 🤿 Boas Práticas com Heranças e Interfaces](./14-boas-praticas-heranca/README.md)
 
 [15. ⚠️ Exceções]()
 
