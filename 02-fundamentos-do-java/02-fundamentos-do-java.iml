@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/01-primeiro-programa" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/06-operadores-aritmeticos" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07-abreviando-operadores-aritmeticos" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/08-operadores-de-incremento-decremento" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/10-conversao-tipos-primitivos" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/11-promocao-aritmetica" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/15-recebendo-entrada-de-dados" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
