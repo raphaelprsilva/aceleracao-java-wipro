@@ -5,7 +5,8 @@ import com.javabank.ContaCorrente;
 
 public class Main {
     public static void main(String[] args) {
-        Conta conta1 = new ContaCorrenteComTributacao();
+        PontuacaoDecorator pontuacaoDecorator = new PontuacaoDecorator(new ContaCorrente());
+        Conta conta1 = new TributacaoDecorator(pontuacaoDecorator);
         Conta conta2 = new ContaCorrente();
 
         conta1.depositar(1000);
@@ -14,5 +15,6 @@ public class Main {
 
         System.out.printf("Saldo da conta 1: R$%.2f%n", conta1.getSaldo());
         System.out.printf("Saldo da conta 2: R$%.2f%n", conta2.getSaldo());
+        System.out.printf("Pontuacação conta 1: %d%n", pontuacaoDecorator.getPontos());
     }
 }
