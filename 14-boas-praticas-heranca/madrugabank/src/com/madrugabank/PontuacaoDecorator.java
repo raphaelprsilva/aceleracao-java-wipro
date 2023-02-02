@@ -18,4 +18,14 @@ public class PontuacaoDecorator extends ContaBaseDecorator {
         getContaOriginal().depositar(valor);
         pontos += valor / 100;
     }
+
+    @Override
+    public void aplicarEmInvestimento(double valor) {
+
+    }
+
+    @Override
+    public void imprimirSaldo() {
+        super.imprimirSaldo();
+    }
 }

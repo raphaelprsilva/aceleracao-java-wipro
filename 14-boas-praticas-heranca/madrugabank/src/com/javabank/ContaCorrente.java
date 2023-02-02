@@ -25,4 +25,14 @@ public class ContaCorrente implements Conta {
         sacar(valor);
         conta.depositar(valor);
     }
+
+    @Override
+    public void aplicarEmInvestimento(double valor) {
+
+    }
+
+    @Override
+    public void imprimirSaldo() {
+        Conta.super.imprimirSaldo();
+    }
 }

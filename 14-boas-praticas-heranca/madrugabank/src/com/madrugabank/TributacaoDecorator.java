@@ -23,6 +23,16 @@ public class TributacaoDecorator extends ContaBaseDecorator {
         debitarImpostoMovimentacao(valor);
     }
 
+    @Override
+    public void aplicarEmInvestimento(double valor) {
+
+    }
+
+    @Override
+    public void imprimirSaldo() {
+        super.imprimirSaldo();
+    }
+
     private void debitarImpostoMovimentacao(double valor) {
         getContaOriginal().sacar(valor * TAXA_IMPOSTO_MOVIMENTACAO);
     }
