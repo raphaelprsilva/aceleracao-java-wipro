@@ -35,7 +35,7 @@ Abaixo, temos a trilha a ser percorrida:
 
 [14. 🤿 Boas Práticas com Heranças e Interfaces](./14-boas-praticas-heranca/README.md)
 
-[15. ⚠️ Exceções]()
+[15. ⚠️ Exceções](./15-excecoes/README.md)
 
 [16. 💬 Generics]()
 
